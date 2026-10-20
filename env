@@ -1,0 +1,40 @@
+# Reference only: the script reads process environment variables, not this file.
+# Never commit a populated copy or share access tokens in chat.
+# Telegram (simplest setup): create a bot with @BotFather, then send it /start.
+TELEGRAM_BOT_TOKEN=8987675666:AAGhSiwyvdnoEnecIV0_dgD_9niHqAGEGJA
+# Discover IDs with: python .\monitor.py --telegram-chat-ids
+# 1-5 private chat IDs, comma separated. Only include consenting recipients.
+TELEGRAM_CHAT_IDS=610926436
+
+# WhatsApp is optional; these settings are not needed for Telegram.
+WHATSAPP_ACCESS_TOKEN=
+WHATSAPP_PHONE_NUMBER_ID=
+# Set an explicitly supported version from your Meta dashboard.
+WHATSAPP_API_VERSION=
+WHATSAPP_TEMPLATE_NAME=train_vacancy_alert
+WHATSAPP_TEMPLATE_LANGUAGE=en_US
+# 1-5 opted-in recipients, country code and digits only, separated by commas.
+WHATSAPP_RECIPIENTS=
+# Set to true only after every configured recipient has explicitly opted in.
+WHATSAPP_RECIPIENTS_OPTED_IN=false
+
+# Monitor settings (command-line flags override these; empty = built-in default)
+# Route file path.
+MONITOR_TRAINS=trains.json
+# Comma-separated five-digit train numbers; empty scans all trains.
+# MONITOR_TRAIN_NOS=12806
+# State file path.
+MONITOR_STATE=state.json
+# Train start date YYYY-MM-DD; empty uses today's IST date.
+# MONITOR_START_DATE=2026-10-20
+# Seconds to wait between cycles; empty runs one cycle.
+MONITOR_INTERVAL=1
+# Chart API request timeout in seconds.
+MONITOR_TIMEOUT=20
+# Seconds between chart request starts.
+MONITOR_REQUEST_DELAY=1
+# true/false.
+MONITOR_DEBUG=false
+# console, telegram or whatsapp.
+MONITOR_NOTIFICATION=telegram
+MONITOR_KEEP_AWAKE=display
